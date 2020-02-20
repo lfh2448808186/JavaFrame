@@ -1,0 +1,12 @@
+#person:
+#  name: 张三
+#  age: 18
+#  boss: false
+#  birth: 2017/12/12
+#  map: {k1: v1,k2: 12}
+#  list:
+#    - 李四
+#    - 张三
+#  dog:
+#    name: 小狗
+#    age: 12

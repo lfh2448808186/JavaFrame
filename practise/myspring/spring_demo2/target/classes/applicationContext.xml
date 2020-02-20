@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="pojo.Student">
+
+        <constructor-arg name="sid" value="1" ></constructor-arg>
+        <constructor-arg name="name" value="zhangSan"></constructor-arg>
+        <constructor-arg name="age" value="18"></constructor-arg>
+        <constructor-arg name="course" value="Java"></constructor-arg>
+    </bean>
+    <bean id="teacher" class="pojo.Teacher">
+        <property name="tid" value="1"></property>
+        <property name="name" value="LiSi"></property>
+    </bean>
+</beans>

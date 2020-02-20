@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mix" class="pojo.Mix">
+        <property name="myList">
+            <list>
+                <value>list01</value>
+                <value>list02</value>
+            </list>
+        </property>
+        <property name="myMap">
+            <map>
+                <entry key="key01" value="map01"></entry>
+                <entry key="key02" value="map02"></entry>
+            </map>
+        </property>
+        <property name="myArray" >
+            <array>
+                <value>arryay01</value>
+                <value>arryay02</value>
+            </array>
+        </property>
+    </bean>
+
+</beans>
