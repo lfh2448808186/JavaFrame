@@ -1,0 +1,18 @@
+#server:
+#  port: 8081
+#
+#person:
+#  lastName: Mark
+#  age: 25
+#  boss: true
+#  birth: 2020/02/23
+#  maps:
+#    k1: v1
+#    k2: v2
+#    k3: v3
+#  list:
+#    - lisi
+#    - zhangsan
+#  dog:
+#    name: 小狗
+#    age: 15

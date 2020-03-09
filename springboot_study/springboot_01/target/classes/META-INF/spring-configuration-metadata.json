@@ -1,0 +1,62 @@
+{
+  "groups": [
+    {
+      "name": "dog",
+      "type": "xust.lfh.pojo.Dog",
+      "sourceType": "xust.lfh.pojo.Dog"
+    },
+    {
+      "name": "person",
+      "type": "xust.lfh.pojo.Person",
+      "sourceType": "xust.lfh.pojo.Person"
+    }
+  ],
+  "properties": [
+    {
+      "name": "dog.age",
+      "type": "java.lang.Integer",
+      "sourceType": "xust.lfh.pojo.Dog"
+    },
+    {
+      "name": "dog.name",
+      "type": "java.lang.String",
+      "sourceType": "xust.lfh.pojo.Dog"
+    },
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "xust.lfh.pojo.Person"
+    },
+    {
+      "name": "person.birth",
+      "type": "java.util.Date",
+      "sourceType": "xust.lfh.pojo.Person"
+    },
+    {
+      "name": "person.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "xust.lfh.pojo.Person"
+    },
+    {
+      "name": "person.dog",
+      "type": "xust.lfh.pojo.Dog",
+      "sourceType": "xust.lfh.pojo.Person"
+    },
+    {
+      "name": "person.last-name",
+      "type": "java.lang.String",
+      "sourceType": "xust.lfh.pojo.Person"
+    },
+    {
+      "name": "person.lists",
+      "type": "java.util.List<java.lang.Object>",
+      "sourceType": "xust.lfh.pojo.Person"
+    },
+    {
+      "name": "person.maps",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "xust.lfh.pojo.Person"
+    }
+  ],
+  "hints": []
+}
