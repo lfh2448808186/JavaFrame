@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <properties resource="database.properties"/>
+    <!--    配置数据库连接池基本环境-->
+    <environments default="mysql">
+        <environment id="mysql">
+            <!--        事务管理器          -->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--   POOLED表示使用数据库连接池     -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--    配置映射文件的位置-->
+    <mappers>
+        <mapper resource="xust/lfh/dao/StuMapper.xml"/>
+        <mapper resource="xust/lfh/dao/StuCardMapper.xml"/>
+        <mapper resource="xust/lfh/dao/StuClassMapper.xml"/>
+        <mapper resource="xust/lfh/dao/ClassInfoMapper.xml"/>
+    </mappers>
+</configuration>

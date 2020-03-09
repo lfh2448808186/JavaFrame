@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xust.lfh.pojo.StuClass">
+    <select id="findStuClassByCid" parameterType="Integer"
+            resultMap="stuClassResultMap">
+        select c.*,s.sid,s.sname,s.age,s.course,s.classid
+        from relationship.stu_class c,relationship.stu_info s
+        where s.classid = c.cid and cid = #{cid}
+    </select>
+    <resultMap id="stuClassResultMap" type="xust.lfh.pojo.StuClass">
+        <id column="cid" property="cid"/>
+        <result column="cname" property="cname"/>
+        <result column="sum"   property="sum" />
+        <collection property="stuInfoList" ofType="xust.lfh.pojo.StuInfo">
+            <id column="sid" property="sid"/>
+            <result column="sname" property="sname"/>
+            <result column="age" property="age"/>
+            <result column="course" property="course"/>
+            <result column="classid" property="classid"/>
+        </collection>
+    </resultMap>
+</mapper>

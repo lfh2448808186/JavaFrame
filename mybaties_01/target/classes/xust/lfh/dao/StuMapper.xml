@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xust.lfh.pojo.Stu">
+    <select id="findStudentBySid" parameterType="int" resultMap="stuResultMap">
+        select s.* ,c.balance from relationship.stu s ,relationship.stu_card c
+        where s.carid = c.cid and s.sid = #{sid}
+    </select>
+    <resultMap id="stuResultMap" type="xust.lfh.pojo.Stu">
+        <id column="sid" property="sid"/>
+        <result column="sname" property="sname"/>
+        <result column="age" property="age"/>
+        <result column="course" property="course"/>
+        <association property="sc" javaType="xust.lfh.pojo.StuCard">
+            <id column="cid" property="cid"/>
+            <result column="balance" property="balance"/>
+        </association>
+    </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper>
+    <resultMap id="teachInfoResultMap" type="xust.lfh.pojo.TeachInfo">
+        <id column=" tid" property="tid"/>
+        <result column="tname" property="tname"/>
+        <result column="age" property="age"/>
+        <result column="course" property="course"/>
+        <collection property="classInfoList" ofType="xust.lfh.pojo.ClassInfo">
+            <id column="cid" property="cid"/>
+            <result column="cname" property="cname"/>
+            <result column="sum" property="sum"/>
+        </collection>
+    </resultMap>
+    <select id="findTeachInfonByCid" parameterType="Integer" resultMap="teachInfoResultMap">
+        select * from relationship.class_teach  ct left join relationship.teach_info  t on 
+        ct.class_id = t.tid where class_id = #{class_id}
+    </select>
+</mapper>
